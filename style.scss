@@ -1,0 +1,115 @@
+$primary-color: #ffa8a6;
+$text-color: #555555;
+$text-title: #1e2528;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+input {
+  box-sizing: border-box;
+}
+.body {
+  font-family: "Poppins", sans-serif;
+  color: $text-color;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.header {
+  &__inner {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    &-list {
+      display: flex;
+    }
+    &-item {
+      color: $text-title;
+      margin-left: 45px;
+      &:first-child {
+        margin-left: 185px;
+      }
+    }
+    &-link {
+      color: $text-title;
+      text-decoration: none;
+      font-size: 12px;
+      flex-direction: column;
+    }
+  }
+}
+.logo__text {
+  padding-top: 10px;
+  max-width: 10px;
+  color: $text-title;
+  text-decoration: none;
+  font-size: 20px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+}
+.banner {
+  padding-top: 200px;
+  &__heading {
+    color: $primary-color;
+    font-size: 12px;
+  }
+  &__middle {
+    padding-top: 45px;
+    font-weight: 700;
+    font-size: 60px;
+    max-width: 50%;
+  }
+  &__desc {
+    padding-top: 50px;
+    color: $text-color;
+    max-width: 500px;
+  }
+  &__buttons {
+    display: flex;
+    padding-top: 60px;
+    margin-left: 0;
+    &-span {
+      padding-left: 30px;
+      font-size: 12px;
+      color: $text-color;
+      justify-content: center;
+    }
+  }
+}
+.btn {
+  cursor: pointer;
+  background-color: #ff817e;
+  height: 50px;
+  display: inline-block;
+  width: 170px;
+  &-reserve {
+    text-align: center;
+    outline: none;
+    font-size: 12px;
+    padding: 20px 35px 20px 35px;
+    color: white;
+    text-decoration: none;
+    text-emphasis: none;
+  }
+  &-playwatch {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    padding: 15px 15px;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    background-color: #fcf5cc;
+  }
+}
