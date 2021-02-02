@@ -23,6 +23,7 @@ input {
     padding-top: 20px;
     display: flex;
     align-items: center;
+    align-items: flex-end;
   }
   &__menu {
     &-list {
@@ -38,18 +39,27 @@ input {
     &-link {
       color: $text-title;
       text-decoration: none;
-      font-size: 12px;
-      flex-direction: column;
+      font-size: 14px;
     }
   }
 }
-.logo__text {
-  padding-top: 10px;
-  max-width: 10px;
-  color: $text-title;
-  text-decoration: none;
-  font-size: 20px;
+.logo {
+  display: flex;
+  &__text {
+    padding-top: 10px;
+    color: $text-title;
+    text-decoration: none;
+    font-size: 30px;
+    max-width: 100px;
+    align-items: flex-end;
+  }
+  &__image {
+    width: 50px;
+    height: 45px;
+    margin-left: 25%;
+  }
 }
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
@@ -61,26 +71,25 @@ input {
   padding-top: 200px;
   &__heading {
     color: $primary-color;
-    font-size: 12px;
+    font-size: 15px;
   }
   &__middle {
     padding-top: 45px;
-    font-weight: 700;
     font-size: 60px;
     max-width: 50%;
   }
   &__desc {
     padding-top: 50px;
     color: $text-color;
-    max-width: 500px;
   }
   &__buttons {
     display: flex;
     padding-top: 60px;
     margin-left: 0;
+    align-items: flex-end;
     &-span {
       padding-left: 30px;
-      font-size: 12px;
+      font-size: 15px;
       color: $text-color;
       justify-content: center;
     }
@@ -95,8 +104,9 @@ input {
   &-reserve {
     text-align: center;
     outline: none;
-    font-size: 12px;
-    padding: 20px 35px 20px 35px;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
     color: white;
     text-decoration: none;
     text-emphasis: none;
@@ -111,5 +121,141 @@ input {
     height: 45px;
     border-radius: 45px;
     background-color: #fcf5cc;
+  }
+  &__about {
+    margin-top: 75px;
+    border-radius: 50px;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+}
+.about {
+  &__table {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__list {
+    width: 24.9%;
+    height: 570px;
+    background-color: #dddddd;
+  }
+  &__item {
+    opacity: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+    &-content {
+      max-width: 100px;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      justify-content: center;
+      & img {
+        width: 47px;
+        height: 42px;
+        position: relative;
+      }
+      & span {
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    padding-top: 250px;
+    text-align: center;
+    padding-bottom: 140px;
+  }
+  &__image1 {
+    display: flex;
+    width: 130px;
+    margin-left: -65px;
+  }
+  &__image2 {
+    padding-top: 10px;
+    width: 84px;
+    height: 70px;
+  }
+  &__image3 {
+    position: absolute;
+    align-items: flex-start;
+  }
+  &__content {
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    text-align: center;
+    & img {
+      max-width: 8rem;
+      margin-left: 65%;
+    }
+    & h3 {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      text-transform: uppercase;
+      color: $text-color;
+      font-weight: 300;
+      font-size: 2rem;
+    }
+  }
+}
+.heading {
+  position: relative;
+  text-align: center;
+  &__title {
+    text-transform: uppercase;
+    color: $text-title;
+    font-weight: 615px;
+    font-size: 42px;
+    padding-bottom: 50px;
+  }
+  &__desc {
+    color: $text-title;
+    font-weight: 815px;
+    font-size: 15px;
+  }
+}
+.popular {
+  padding-top: 140px;
+  &__list {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    & img {
+      width: 320px;
+      height: 260px;
+      padding: 20px;
+      object-fit: cover;
+      border: rgba(0, 0, 0, 0.025);
+    }
+  }
+  &__item {
+    background-color: white;
+    width: 360px;
+  }
+  &__link {
+    height: 100%;
+    display: block;
+    padding: 2rem 2rem 4.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+    transition: box-shadow 0.2s linear;
+    &:hover {
+      box-shadow: 0 0 14px 14px rgba(0, 0, 0, 0.025);
+    }
+    &:hover .btn__about {
+      background-color: red;
+    }
   }
 }
